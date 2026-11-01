@@ -2,6 +2,10 @@
 body{min-height:100vh!important;color:#edf4ff!important;background:radial-gradient(ellipse at 75% 5%,#18205a,transparent 36%),radial-gradient(ellipse at 8% 45%,#24104a,transparent 32%),#070817!important}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(#43adff20 1px,transparent 1px),linear-gradient(90deg,#43adff20 1px,transparent 1px);background-size:42px 42px}
 body:after{content:none!important}
+/* Match the homepage Cyberpunk background exactly */
+body{min-height:100vh!important;color:#edf4ff!important;background:radial-gradient(ellipse at 75% 5%,#18205a,transparent 36%),radial-gradient(ellipse at 8% 45%,#24104a,transparent 32%),#070817!important}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(#43adff20 1px,transparent 1px),linear-gradient(90deg,#43adff20 1px,transparent 1px);background-size:42px 42px}
+body:after{content:none!important}
 </style></head><body><header class="top"><a class="brand" href="../index.html">&lt;/&gt; PHP_7024</a><nav><a href="../index.html">⌂ กลับหน้าหลัก</a><a href="https://github.com/WaySpaceOrg/php_7024" target="_blank" rel="noopener">⌘ GitHub</a></nav></header><main class="wrap"><section class="panel"><header>
     <h1>คาเฟ่แมวเหมียว</h1>
     <nav>
