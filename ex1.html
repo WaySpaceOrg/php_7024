@@ -35,6 +35,10 @@ h1{font:800 clamp(32px,5vw,58px)/1.15 Orbitron;margin:14px 0;background:linear-g
 .btn.primary{color:white;background:linear-gradient(100deg,#5c1bd4,#073d83);box-shadow:0 0 18px #28eaff55}
 footer{padding:22px 5%;border-top:1px solid var(--line);background:#050716;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(max-width:650px){.top{align-items:flex-start;flex-direction:column}nav{gap:14px}.cards{grid-template-columns:1fr}}
+/* Unified Cyberpunk background for every EX page */
+body{position:relative;isolation:isolate;min-height:100vh!important;color:#edf4ff!important;background-color:#070817!important;background-image:radial-gradient(ellipse at 78% 4%,rgba(40,234,255,.20),transparent 34%),radial-gradient(ellipse at 12% 42%,rgba(242,59,255,.17),transparent 36%),linear-gradient(135deg,#070817 0%,#0b1030 48%,#130a2b 100%)!important;background-attachment:fixed!important}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.24;background-image:linear-gradient(rgba(40,234,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(40,234,255,.13) 1px,transparent 1px),radial-gradient(circle at 50% 50%,transparent 40%,rgba(0,0,0,.38) 100%);background-size:38px 38px,38px 38px,100% 100%}
+body:after{content:"";position:fixed;z-index:-1;pointer-events:none;width:42vw;height:42vw;max-width:520px;max-height:520px;right:-14vw;top:16vh;border-radius:50%;background:rgba(242,59,255,.10);filter:blur(85px)}
 </style>
 </head>
 <body>
