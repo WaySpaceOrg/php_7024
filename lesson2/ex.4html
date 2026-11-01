@@ -9,5 +9,7 @@
 </head>
 <body style="font-family:sans-serif;background:#070817;color:#edf4ff;padding:2rem">
 <p>ไฟล์นี้ถูกย้ายไปยังชื่อที่ถูกต้องแล้ว กำลังเปลี่ยนหน้าไปยัง <a href="ex4.html" style="color:#28eaff">Lesson 02 · EX4</a>…</p>
+
+<p style="text-align:center;margin:28px 0"><a class="back-to-index" href="../index.html" style="display:inline-block;padding:12px 22px;border:1px solid #28eaff;border-radius:999px;background:linear-gradient(100deg,#5922d6,#07518e);color:#fff;font-weight:700;text-decoration:none">← กลับหน้า Index</a></p>
 </body>
 </html>
