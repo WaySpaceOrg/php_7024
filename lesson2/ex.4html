@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="0; url=ex4.html">
+<title>กำลังไปยัง Lesson 02 · EX4</title>
+<script>window.location.replace("ex4.html");</script>
+</head>
+<body style="font-family:sans-serif;background:#070817;color:#edf4ff;padding:2rem">
+<p>ไฟล์นี้ถูกย้ายไปยังชื่อที่ถูกต้องแล้ว กำลังเปลี่ยนหน้าไปยัง <a href="ex4.html" style="color:#28eaff">Lesson 02 · EX4</a>…</p>
+</body>
+</html>
