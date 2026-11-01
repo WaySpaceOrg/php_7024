@@ -46,9 +46,43 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}
 @media(max-width:920px){.site-header{position:relative;grid-template-columns:1fr auto;gap:12px}.top-nav{grid-column:1/-1;grid-row:2;justify-content:flex-start;overflow-x:auto}.search-box{grid-column:2;grid-row:1;width:220px}.page-shell{grid-template-columns:210px minmax(0,1fr);width:96%}.right-column{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}.about-panel{grid-row:span 2}.hero-panel{min-height:400px}.hero-person{width:42%}.hero-copy{width:67%}}
 @media(max-width:640px){.site-header{grid-template-columns:1fr;padding:12px 4%;gap:10px}.brand-mark{font-size:42px}.brand-copy strong{font-size:25px}.brand-copy small{font-size:13px}.search-box{grid-column:1;grid-row:auto;width:100%}.top-nav{grid-column:1;grid-row:auto;width:100%;gap:3px}.top-nav a{font-size:13px;padding:8px}.top-nav a .nav-icon{font-size:18px}.page-shell{display:flex;flex-direction:column;width:94%;padding-top:10px}.left-column,.center-column,.right-column{width:100%}.center-column{order:1}.right-column{order:2;display:flex}.hero-panel{min-height:520px}.hero-person{left:0;width:53%;height:60%;opacity:.72}.hero-copy{width:100%;padding:34px 18px 24px;text-align:center}.hero-copy h1{font-size:clamp(37px,10vw,57px);letter-spacing:-2px}.hero-subtitle{font-size:25px}.hero-description{font-size:14px}.course-grid{grid-template-columns:1fr}.course-card{display:grid;grid-template-columns:36% 1fr}.course-art{height:100%;min-height:170px;border-right:1px solid rgba(24,234,255,.45);border-bottom:0}.course-info{padding:12px}.course-info p{min-height:0}.section-heading{align-items:flex-start}.heading-title h2{font-size:21px}.view-all{padding:8px 11px;font-size:12px}.site-footer{justify-content:center;text-align:center}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* FAST CYBERPUNK CITY MOTION */
+.speed-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;isolation:isolate;contain:strict}
+.speed-bg .speed-grid{position:absolute;left:-18%;right:-18%;bottom:-48%;height:76%;transform:perspective(340px) rotateX(62deg);transform-origin:50% 0;background-image:linear-gradient(rgba(0,221,255,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(0,221,255,.24) 1px,transparent 1px);background-size:100% 46px,68px 100%;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%);opacity:.25;animation:speedGridRush .72s linear infinite}
+.speed-bg .speed-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,transparent 28%,rgba(2,4,18,.42) 100%),linear-gradient(180deg,rgba(4,7,25,.08),transparent 24%,rgba(4,7,25,.16))}
+.speed-streak{position:absolute;left:-55%;width:clamp(180px,26vw,520px);height:2px;top:var(--top,50%);opacity:0;transform:translate3d(0,0,0) rotate(-13deg);background:linear-gradient(90deg,transparent 0%,var(--streak-color,rgba(20,232,255,.12)) 55%,rgba(225,252,255,.95) 78%,transparent 100%);box-shadow:0 0 7px var(--streak-color,rgba(20,232,255,.8)),0 0 18px var(--streak-color,rgba(20,232,255,.6));animation:neonFly var(--speed,1.7s) linear var(--delay,0s) infinite}
+.speed-streak:nth-of-type(2n){height:1px;width:clamp(130px,19vw,360px)}
+.speed-streak:nth-of-type(3n){height:3px;filter:blur(.3px)}
+.speed-streak:nth-of-type(4n){left:-75%;width:clamp(220px,34vw,620px)}
+.speed-streak:nth-of-type(5n){height:1px;opacity:.7}
+@keyframes neonFly{0%{opacity:0;transform:translate3d(-8vw,0,0) rotate(-13deg) scaleX(.25)}8%{opacity:.85}55%{opacity:.65}100%{opacity:0;transform:translate3d(175vw,0,0) rotate(-13deg) scaleX(1.25)}}
+@keyframes speedGridRush{from{background-position:0 0,0 0}to{background-position:0 46px,0 0}}
+@keyframes cityFlash{0%,100%{opacity:.08}48%{opacity:.22}52%{opacity:.38}58%{opacity:.1}}
+.speed-bg:before{content:"";position:absolute;inset:-20%;opacity:.2;background:repeating-linear-gradient(112deg,transparent 0 130px,rgba(0,225,255,.36) 131px 133px,transparent 134px 250px),repeating-linear-gradient(112deg,transparent 0 230px,rgba(238,35,255,.3) 231px 233px,transparent 234px 390px);animation:cityFlash 2.8s steps(4,end) infinite,cityParallax 3.6s linear infinite}
+@keyframes cityParallax{from{transform:translate3d(-2%,0,0)}to{transform:translate3d(2%,1%,0)}}
+.page-shell,.site-footer{position:relative;z-index:1}
+.site-header{z-index:20}
+@media(prefers-reduced-motion:reduce){.speed-bg .speed-grid,.speed-bg:before,.speed-streak{animation:none!important}.speed-bg{opacity:.35}}
+@media(max-width:640px){.speed-bg .speed-grid{opacity:.55}.speed-streak{width:44vw}}
 </style>
 </head>
 <body>
+<div class="speed-bg" aria-hidden="true">
+  <div class="speed-grid"></div>
+  <div class="speed-vignette"></div>
+  <span class="speed-streak" style="--top:9%;--speed:1.35s;--delay:-.2s;--streak-color:rgba(15,226,255,.9)"></span>
+  <span class="speed-streak" style="--top:17%;--speed:1.8s;--delay:-1.1s;--streak-color:rgba(239,45,255,.88)"></span>
+  <span class="speed-streak" style="--top:26%;--speed:1.15s;--delay:-.65s;--streak-color:rgba(28,188,255,.85)"></span>
+  <span class="speed-streak" style="--top:34%;--speed:2.1s;--delay:-1.7s;--streak-color:rgba(239,45,255,.8)"></span>
+  <span class="speed-streak" style="--top:43%;--speed:1.45s;--delay:-.9s;--streak-color:rgba(15,226,255,.9)"></span>
+  <span class="speed-streak" style="--top:51%;--speed:1.9s;--delay:-.35s;--streak-color:rgba(239,45,255,.82)"></span>
+  <span class="speed-streak" style="--top:59%;--speed:1.25s;--delay:-1.4s;--streak-color:rgba(28,188,255,.9)"></span>
+  <span class="speed-streak" style="--top:67%;--speed:1.7s;--delay:-.55s;--streak-color:rgba(239,45,255,.86)"></span>
+  <span class="speed-streak" style="--top:75%;--speed:1.3s;--delay:-1.95s;--streak-color:rgba(15,226,255,.88)"></span>
+  <span class="speed-streak" style="--top:84%;--speed:2s;--delay:-.8s;--streak-color:rgba(239,45,255,.8)"></span>
+  <span class="speed-streak" style="--top:93%;--speed:1.5s;--delay:-1.25s;--streak-color:rgba(15,226,255,.9)"></span>
+</div>
 <header class="site-header" id="home">
   <a class="brand" href="#home" aria-label="PHP 7024 Home"><span class="brand-mark">&lt;/&gt;</span><span class="brand-copy"><strong>PHP_7024</strong><small>CyberPhuk Learning Hub</small></span></a>
   <nav class="top-nav" aria-label="Main navigation">
