@@ -1,0 +1,35 @@
+<form method="post" action="booking.php">
+    <label for="name">ชื่อผู้จอง</label>
+    <input type="text"id="name"name="name"required >
+
+    <!-- เพิ่มช่องที่เหลือตามตาราง -->
+ <label for="phone">เบอร์โทร</label>
+  <input type="tel" id="phone" name="phone">
+  
+<label for="date">วันที่</label>
+  <input type="date" id="date" name="date" required>
+ 
+  <label for="guests">จำนวนคน</label>
+  <input type="number" id="guests" name="guests" min="1" max="10">
+  
+<label>โซน</label>
+  <input type="radio" id="zone_inside" name="zone" value="inside">
+  <label for="zone_inside">ในร้าน</label>
+  <input type="radio" id="zone_water" name="zone" value="water">
+  <label for="zone_water">ริมน้ำ</label>
+                         
+  <label for="time">รอบเวลา</label>
+  <select id="time" name="time">
+    <option value="12:00">12:00</option>
+    <option value="17:00">17:00</option>
+    <option value="19:00">19:00</option>
+  </select>
+  
+   <label for="birthday">มาฉลองวันเกิด</label>
+  <input type="checkbox" id="birthday" name="birthday">
+
+  <label for="note">หมายเหตุ</label>
+  <textarea id="note" name="note"></textarea>
+  
+  <button type="submit">จองโต๊ะ</button>
+</form>

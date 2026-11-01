@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เครื่องคิด BMI</title>
+</head>
+<body>
+    <h1>เครื่องคิด BMI</h1>
+    <p>น้ำหนัก (กก.) <input id="weight"></p>
+    <p>ส่วนสูง (ซม.) <input id="height"></p>
+    <button id="calc">คำนวณ</button>
+    <p id="result"></p>
+
+    <script>
+        // เมื่อกดปุ่ม: อ่านค่า → คำนวณ → แสดงผลใน #result
+        document.getElementById("calc").addEventListener("click", function () {
+            const weight = Number(document.getElementById("weight").value);
+            const heightCm = Number(document.getElementById("height").value);
+            const result = document.getElementById("result");
+
+            if (!weight || !heightCm) {
+                result.textContent = "กรุณากรอกน้ำหนักและส่วนสูง";
+                return;
+            }
+
+            const heightM = heightCm / 100;
+            const bmi = weight / (heightM * heightM);
+
+            let group;
+            if (bmi < 18.5) {
+                group = "น้ำหนักน้อย";
+            } else if (bmi < 25) {
+                group = "ปกติ";
+            } else {
+                group = "น้ำหนักเกิน";
+            }
+
+            result.textContent = "BMI " + bmi.toFixed(1) + " (" + group + ")";
+        });
+    </script>
+</body>
+</html>

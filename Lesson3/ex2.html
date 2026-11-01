@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>ราคา <span id="price">45</span> บาท</p>
+<input id="qty" value="3">
+<p id="total"></p>
+
+<script>
+    const price = Number(document.getElementById("price").textContent);   // 45
+    const qty   = Number(document.getElementById("qty").value);           // 3
+
+    document.getElementById("total").textContent = "รวม " + (price * qty) + " บาท";
+    // หน้าเว็บขึ้นว่า: รวม 135 บาท
+</script>
+</body>
+</html>

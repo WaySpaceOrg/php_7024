@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="like">❤️ ถูกใจ</button>
+<span id="count">0</span>
+
+<script>
+    let likes = 0;
+    const btn = document.getElementById("like");
+
+    btn.addEventListener("click", function () {
+        likes = likes + 1;
+        document.getElementById("count").textContent = likes;
+
+        if (likes >= 10) {
+            console.log("ยอดนิยมแล้ว!");
+        } else {
+            console.log("อีก " + (10 - likes) + " ครั้ง");
+        }
+    });
+</script>
+</body>
+</html>
