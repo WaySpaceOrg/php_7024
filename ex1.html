@@ -1,30 +1,66 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>โปรไฟล์ของฉัน</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070817">
+<title>My Profile | PHP_7024 CyberPhuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070817;--panel:#0b1230;--cyan:#28eaff;--pink:#f23bff;--muted:#9aabc9;--line:#28eaff66}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:#edf4ff;font-family:Kanit,sans-serif;background:radial-gradient(ellipse at 75% 5%,#18205a,transparent 36%),radial-gradient(ellipse at 8% 45%,#24104a,transparent 32%),var(--bg)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(#43adff20 1px,transparent 1px),linear-gradient(90deg,#43adff20 1px,transparent 1px);background-size:42px 42px}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 4%;background:#050716ed;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.brand{display:flex;gap:12px;align-items:center}.mark{font:800 34px Orbitron;color:var(--pink);text-shadow:0 0 15px var(--pink)}.brand b{font:800 20px Orbitron;background:linear-gradient(90deg,var(--pink),var(--cyan));color:transparent;background-clip:text}.brand small{display:block;color:#c4d4f7;font-size:11px;letter-spacing:1px}
+nav{display:flex;gap:22px;flex-wrap:wrap}nav a{font-size:14px;color:#d8e4ff}nav a:hover{color:var(--cyan)}
+.wrap{width:min(1100px,92%);margin:34px auto 55px}
+.hero{padding:clamp(28px,5vw,58px);border:1px solid var(--line);border-radius:22px;background:linear-gradient(110deg,#0a0c26f5,#0e143bcc);box-shadow:0 0 24px #28eaff25,0 0 35px #f23bff18}
+.eyebrow{font:600 12px Orbitron;letter-spacing:3px;color:var(--cyan)}
+h1{font:800 clamp(32px,5vw,58px)/1.15 Orbitron;margin:14px 0;background:linear-gradient(90deg,#fff,var(--pink),var(--cyan));color:transparent;background-clip:text}
+.subtitle{font-size:20px;color:#d8e4ff;margin:0}
+.intro{color:#c2d0ef;line-height:1.9;margin:12px 0 0}
+.section-title{margin:36px 2px 16px}.section-title h2{font-size:26px;margin:7px 0}.section-title p{margin:0;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.panel{padding:24px;border:1px solid var(--line);border-radius:16px;background:#0b1230ef;box-shadow:0 0 18px #28eaff1c}
+.panel h2{margin:0 0 12px;color:#fff;font-size:21px}.panel p{color:#c2d0ef;line-height:1.8;margin:0}
+.quicklinks{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.quicklinks a,.btn{display:inline-block;padding:9px 16px;border:1px solid var(--cyan);border-radius:24px;color:var(--cyan);font-weight:600;transition:.2s}
+.quicklinks a:hover,.btn:hover{background:#28eaff18;border-color:var(--pink);color:var(--pink);box-shadow:0 0 14px #28eaff44}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn.primary{color:white;background:linear-gradient(100deg,#5c1bd4,#073d83);box-shadow:0 0 18px #28eaff55}
+footer{padding:22px 5%;border-top:1px solid var(--line);background:#050716;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:650px){.top{align-items:flex-start;flex-direction:column}nav{gap:14px}.cards{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-<nav aria-label="เมนูหลัก" style="margin:16px 0;padding:12px 16px;background:#101a35;border:1px solid #28eaff;border-radius:10px;font-family:Arial,sans-serif"><a href="index.html" style="color:#28eaff;text-decoration:none;font-weight:bold">← กลับหน้าแรก (Home)</a></nav>
-
-<nav aria-label="เมนูหลัก" style="margin:16px 0;padding:12px 16px;background:#101a35;border:1px solid #28eaff;border-radius:10px;font-family:Arial,sans-serif"><a href="index.html" style="color:#28eaff;text-decoration:none;font-weight:bold">← กลับหน้าแรก (Home)</a></nav>
-
-    <!-- 1. header + h1 -->
-		<header>
-      <h1>Wayroad Pongbuparikul</h1>
-  	</header>
-    <!-- 2. nav + ลิงก์ 3 อัน -->
-		<nav>
-      <a href="1.html">Link1</a>
-      <a href="2.html">Link2</a>
-      <a href="3.html">Link3</a>
-  	</nav>
-    <!-- 3. main + section 2 ส่วน (แต่ละส่วนมี h2) -->
-		<main>
-      <section><h2>งานอดิเรก</h2></section>
-      <section><h2>อาหารที่ชอบ</h2></section>
-  	</main>
-    <!-- 4. footer -->
-    <footer><p>@2026</p></footer>
+<header class="top">
+  <a class="brand" href="index.html"><span class="mark">&lt;/&gt;</span><span><b>PHP_7024</b><small>CYBERPHUK LEARNING HUB</small></span></a>
+  <nav aria-label="เมนูหลัก"><a href="index.html">⌂ Home</a><a href="#profile">◈ Profile</a><a href="#interests">▤ My Interests</a><a href="#links">⌁ Links</a></nav>
+</header>
+<main class="wrap">
+  <section class="hero" id="profile">
+    <div class="eyebrow">LESSON 01 · HTML PROFILE</div>
+    <h1>Wayroad Pongbuparikul</h1>
+    <p class="subtitle">โปรไฟล์ของฉัน · My Personal Profile</p>
+    <p class="intro">ยินดีต้อนรับสู่หน้าโปรไฟล์ส่วนตัว ตัวอย่างการใช้โครงสร้าง HTML ได้แก่ header, nav, main, section และ footer</p>
+    <div class="actions"><a class="btn primary" href="index.html">← กลับหน้าหลัก (Back to Home)</a><a class="btn" href="#interests">ดูข้อมูลของฉัน ↓</a></div>
+  </section>
+  <div class="section-title" id="interests"><div class="eyebrow">GET TO KNOW ME</div><h2>▤ ข้อมูลส่วนตัว</h2><p>สิ่งที่ฉันสนใจและชื่นชอบ</p></div>
+  <section class="cards">
+    <article class="panel"><h2>✦ งานอดิเรก</h2><p>กิจกรรมยามว่างที่ฉันสนใจและชอบทำ</p></article>
+    <article class="panel"><h2>✦ อาหารที่ชอบ</h2><p>อาหารจานโปรดที่ฉันชื่นชอบ</p></article>
+  </section>
+  <div class="section-title" id="links"><div class="eyebrow">EXPLORE MORE</div><h2>⌁ ลิงก์เพิ่มเติม</h2><p>ลิงก์ตัวอย่างจากแบบฝึกหัดเดิม</p></div>
+  <section class="panel">
+    <div class="quicklinks"><a href="1.html">Link 1 ↗</a><a href="2.html">Link 2 ↗</a><a href="3.html">Link 3 ↗</a></div>
+    <p style="margin-top:16px">ใช้ปุ่มด้านบนหรือแถบเมนูเพื่อย้อนกลับไปยังหน้าหลักของเว็บไซต์ได้ทุกเมื่อ</p>
+  </section>
+</main>
+<footer><span>© 2026 WaySpaceOrg. Learning by doing.</span><span>PHP_7024 · CyberPhuk Learning Hub</span><span>Made with ♥ for Developers</span></footer>
 </body>
 </html>
